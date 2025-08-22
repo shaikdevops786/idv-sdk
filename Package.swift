@@ -2,27 +2,16 @@
 import PackageDescription
 
 let package = Package(
-  name: "IDVSDK",
-  platforms: [.iOS(.v15)],
+  name: "idv-sdk",
+  platforms: [.iOS(.v13)],
   products: [
-    .library(name: "IDVSDK", targets: ["IDVSDK"])
+    .library(name: "nfcPassportIdSdk", targets: ["nfcPassportIdSdk"])
   ],
   targets: [
     .binaryTarget(
       name: "nfcPassportIdSdk",
-      url: "https://github.com/shaikdevops786/idv-sdk/releases/download/1.0.0/OpenSSL.xcframework.zip",
-      checksum: "16492b581780428fd9dec91df006eb7d47480c0834683ffa7d9cb461f84de165"
-    ),
-    .binaryTarget(
-      name: "OpenSSL",
-      url: "https://github.com/shaikdevops786/idv-sdk/releases/download/1.0.0/nfcPassportIdSdk.xcframework.zip",
-      checksum: "5ac6efe3173b3158f7b427df57a427dad8d5fc333cc05f267848fa9a65f41b68"
-    ),
-    .target(
-      name: "IDVSDK",
-      dependencies: ["nfcPassportIdSdk", "OpenSSL"],
-      path: "Sources/IDVSDK",
-      sources: ["Stub.swift"]
+      url: "https://github.com/shaikdevops786/idv-sdk/releases/download/1.0.1/nfcPassportIdSdk.xcframework.zip",
+      checksum: "5c1e5dd704e901c9ba0ee5a69c5aecdfede86efcac52b9c2a8bebd4e67d7d6de"
     )
   ]
 )
